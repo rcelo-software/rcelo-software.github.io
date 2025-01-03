@@ -1,0 +1,36 @@
+<header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    
+    <nav class="site-nav">
+      <div class="trigger">
+        {% assign sorted_navigation = site.data.navigation | sort: 'order' %}
+        {% for item in sorted_navigation %}
+          <a class="page-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {% endfor %}
+      </div>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .language-selector {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .lang-link {
+    padding: 3px 8px;
+    margin: 0 2px;
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: #f0f0f0;
+  }
+  
+  .current-lang {
+    padding: 3px 8px;
+    margin: 0 2px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+  }
+</style> 

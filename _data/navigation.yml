@@ -1,0 +1,12 @@
+- title: Home
+  url: /
+  order: 1
+- title: Mindset
+  url: /mindset/
+  order: 2
+- title: Blog
+  url: /blog/
+  order: 3
+- title: About
+  url: /about/
+  order: 4 
