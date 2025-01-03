@@ -18,37 +18,52 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: RCELO SOFTWARE
+title: rcelo-software
 email: rcelo.software@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Software consulting with DevOps expertise.
-
+description: >- 
+  Software development and professional growth journey
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://rcelo-software.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  rcelo-software
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: rcelo-software
 
 # Build settings
+markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Directory settings
+source: .
+destination: ./_site
+
+# Collections configuration
+collections_dir: content
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# Default settings for posts
+defaults:
+  - scope:
+      type: "posts"
+      path: ""
+    values:
+      layout: "post"
+      author: "rcelo"
+      comments: false
+
+# Explicitly include content directories
+include:
+  - content/posts
+  - content
+
+# Standard excludes
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
