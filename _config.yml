@@ -23,7 +23,7 @@ email: rcelo.software@gmail.com
 description: >- 
   Software development and professional growth journey
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://rcelo-software.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: rcelo-software
 
 # Build settings
