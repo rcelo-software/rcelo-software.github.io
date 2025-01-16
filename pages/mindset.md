@@ -3,4 +3,8 @@ layout: page
 title: Mindset
 permalink: /mindset/
 ---
-Your mindset content here 
+
+## **Mindset Content**
+<!-- Your mindset content here -->
+
+{% include footer.html %} 

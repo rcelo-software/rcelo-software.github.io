@@ -1,0 +1,113 @@
+// Add CSS variables at the top of the file
+:root {
+  --primary: #9146FF;
+  --primary-hover: #e591ff;  // Slightly darker purple for hover states
+}
+
+.site-title {
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: var(--primary);
+  
+  &:hover {
+    text-decoration: none;
+    color: var(--primary-hover);
+  }
+}
+
+.page-title {
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+// Override Minima's base styles
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+  }
+}
+
+pre, code {
+  background-color: var(--surface);
+}
+
+blockquote {
+  border-left: 4px solid var(--surface);
+  padding-left: 1rem;
+  font-style: italic;
+  color: var(--text-light);
+}
+
+table {
+  border: 1px solid var(--surface);
+  
+  th {
+    background-color: var(--surface);
+  }
+  
+  td {
+    border: 1px solid var(--surface);
+  }
+}
+
+.post-content {
+  h1, h2, h3, h4 {
+    color: $grey-color-dark;  // Use the dark grey color for headings
+    font-weight: 700;
+    margin-top: 2rem;
+  }
+}
+
+// Custom styles
+.site-header {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post-link {
+  color: var(--primary);
+  &:hover {
+    text-decoration: none;
+    color: var(--primary-hover);
+  }
+}
+
+.post-content {
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+// Add these styles for navigation
+.site-nav {
+  .page-link {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--primary, #2a7ae2);
+    margin-right: 20px;
+    
+    &:hover {
+      text-decoration: none;
+      color: var(--primary-hover, darken(#2a7ae2, 15%));
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .page-link {
+      margin: 0;
+      padding: 10px 20px;
+      display: block;
+      
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+}
