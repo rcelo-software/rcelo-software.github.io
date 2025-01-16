@@ -1,0 +1,26 @@
+// Override Minima's color functions with modern syntax
+@use "sass:color";
+
+// Original: lighten($grey-color, 40%)
+$grey-color-light: color.adjust($grey-color, $lightness: 40%) !default;
+
+// Original: darken($grey-color, 25%)
+$grey-color-dark: color.adjust($grey-color, $lightness: -25%) !default;
+
+// Override other color adjustments
+@mixin color-adjustments {
+  // For links (original: darken($brand-color, 15%))
+  a:visited {
+    color: color.adjust($brand-color, $lightness: -15%);
+  }
+
+  // For code blocks (original: lighten($text-color, 18%))
+  pre, code {
+    color: color.adjust($text-color, $lightness: 18%);
+  }
+
+  // For code block backgrounds (original: lighten($grey-color-light, 6%))
+  pre {
+    background-color: color.adjust($grey-color-light, $lightness: 6%);
+  }
+}

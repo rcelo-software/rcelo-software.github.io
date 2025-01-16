@@ -1,12 +1,11 @@
-- title: Home
-  url: /
-  order: 1
-- title: Mindset
-  url: /mindset/
-  order: 2
+- title: Contact
+  url: /contact/
+  order: 99
+
+# - title: Mindset
+#   url: /mindset/
+#   order: 2
+
 - title: Blog
   url: /blog/
-  order: 3
-- title: About
-  url: /about/
-  order: 4 
+  order: 3 

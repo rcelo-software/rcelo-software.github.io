@@ -1,22 +1,37 @@
 ## Getting Started
 
 #### Prerequisites
+
 - Docker
 - Docker Compose
 
-### Local Development
+### Running the Site
+
+#### Production Build
 
 ```bash
-# Start the development server
+# Build the site for production
+docker-compose run --rm site jekyll build
+
+# The built site will be in the _site directory
+# Deploy these files to your web server
+```
+
+#### Local Development
+
+```bash
+# Start the development server with auto-reload
 docker-compose up
 
 # Access the site at http://localhost:4000
 ```
 
-The development server includes auto-reload functionality:
+The development server includes hot-reload functionality:
+
 - Changes to posts, pages, and most content files will trigger automatic rebuild
 - Changes to `_config.yml` require a server restart
 - Changes to Gemfile or Dockerfile require rebuilding the container:
+
   ```bash
   docker-compose down
   docker-compose up --build
@@ -39,6 +54,7 @@ docker-compose run --rm site jekyll build --verbose
 ```
 
 Common build flags:
+
 - `--drafts`: Include draft posts from `_drafts` folder
 - `--future`: Include posts with future dates
 - `--force`: Force a rebuild, ignoring cache
@@ -48,6 +64,7 @@ Common build flags:
 ### Troubleshooting
 
 If changes aren't reflecting:
+
 ```bash
 # Stop containers and clean up
 docker-compose down
@@ -99,6 +116,7 @@ docker-compose up --build
    - Example: `2024-03-20-getting-started-with-docker.md`
 
 2. Add the required front matter at the top of your post:
+
 ```yaml
 ---
 layout: post
@@ -114,6 +132,7 @@ tags: [tag1, tag2]  # Optional
 ### Adding Navigation Items
 
 To add new navigation links, edit `_data/navigation.yml`:
+
 ```yaml
 - title: "Home"
   url: "/"
@@ -135,6 +154,7 @@ The development server (`docker-compose up`) includes live-reload functionality:
   - Most content files
 
 - **Requires Server Restart:**
+
   ```bash
   # When changing _config.yml
   docker-compose down
@@ -142,6 +162,7 @@ The development server (`docker-compose up`) includes live-reload functionality:
   ```
 
 - **Requires Container Rebuild:**
+
   ```bash
   # When modifying:
   # - Gemfile

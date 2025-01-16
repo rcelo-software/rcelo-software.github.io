@@ -2,4 +2,104 @@
 layout: default
 ---
 
-HOME
+<style>
+  .hologram {
+    font-size: 150px;
+    animation: glow .4s infinite alternate;
+    text-shadow: 
+      0 0 10px rgba(0, 255, 255, 0.7), 
+      0 0 20px rgba(255, 0, 255, 0.7), 
+      0 0 30px rgba(0, 255, 0, 0.5);
+    transition: text-shadow 0.5s ease, opacity 0.5s ease;
+  }
+
+  /* Hover effect for neon glow on emoji */
+  .hologram:hover {
+    text-shadow: 
+      0 0 30px rgba(0, 255, 255, 1), 
+      0 0 60px rgba(255, 0, 255, 1), 
+      0 0 90px rgba(0, 255, 0, 0.7);
+    opacity: 1;
+    font-size: 350px; /* Increase font size on hover */
+  }
+
+  .busy {
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    font-size: 36px; /* Set the base font size */
+    transition: text-shadow 0.5s ease, font-size 0.3s ease;
+    color: #000; /* Set text color to black */
+    max-width: 200px; /* Set a maximum width for text elements */
+    white-space: normal; /* Allow text to wrap normally */
+    margin: 10px; /* Add some margin for spacing */
+    text-align: center; /* Center the text */
+  }
+
+  /* Updated hover effect for text to increase size */
+  .busy:hover {
+    font-size: 40px; /* Increase size on hover */
+    opacity: 1;
+  }
+
+  .home-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between items */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 0 20px; /* Padding for the container */
+  }
+</style>
+
+<div class="home-container">
+  <div>
+    <h1 class="hologram" id="dynamic-emoji" style="font-size: 270px;">🎉</h1>
+    <p class="busy" id="status-text" style="font-size: 32.4px;">WELCOME, STRANGER</p>
+  </div>
+  <div>
+    <h1 class="hologram" id="dynamic-emoji" style="font-size: 270px;">💡</h1>
+    <p class="busy" id="status-text_day" style="font-size: 32.4px;">Our big idea has been brewing for 349 days</p>
+  </div>
+  <div>
+    <h1 class="hologram" id="dynamic-emoji" style="font-size: 270px;">🚀</h1>
+    <p class="busy" id="status-text" style="font-size: 32.4px;">We’ve been live for just 1 day</p>
+  </div>
+  <div>
+    <h1 class="hologram" id="dynamic-emoji" style="font-size: 270px;">🕒</h1>
+    <p class="busy" id="status-text_billed" style="font-size: 32.4px;">We have billed over 400 hours</p>
+  </div>
+  <div>
+    <h1 class="hologram" id="dynamic-emoji" style="font-size: 270px;">👥</h1>
+    <p class="busy" id="status-text" style="font-size: 32.4px;">We have 0 clients on board</p>
+  </div>
+
+  <div>
+    <h1 class="hologram" id="dynamic-emoji" style="font-size: 270px;">💰</h1>
+    <p class="busy" id="status-text" style="font-size: 32.4px;">Revenue’s at $1M… and climbing</p>
+  </div>
+  <div>
+    <h1 class="hologram" id="dynamic-emoji" style="font-size: 270px;">📃</h1>
+    <p class="busy" id="status-text" style="font-size: 32.4px;">18 contracts signed this year</p>
+  </div>
+</div>
+
+<script>
+
+  // Function to calculate days since a given date
+  function calculateDaysSince(date) {
+    const currentDate = new Date(); // Current date
+    const timeDifference = currentDate - date; // Time difference in milliseconds
+    return Math.floor(timeDifference / (1000 * 60 * 60 * 24)); // Convert to days
+  }
+
+  // Hardcoded dates
+  const dnsPurchaseDate = new Date('2024-02-01'); // DNS purchase date
+  const siteLaunchDate = new Date('2024-02-01'); // Site launch date
+
+  // Update the status text with the number of days since each event
+  document.getElementById('status-text_day').innerText = `This idea exists for ${calculateDaysSince(dnsPurchaseDate)} days!`;
+  document.getElementById('status-text_site').innerText = `Site has been live for ${calculateDaysSince(siteLaunchDate)} days!`;
+
+</script>
+
+{% include footer.html %}   
