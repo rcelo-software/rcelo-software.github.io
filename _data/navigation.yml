@@ -9,7 +9,6 @@
 - title: blog
   url: /blog/
   order: 3 
-
-- title: work
-  url: /work/
-  order: 2
+# - title: work
+#   url: /work/
+#   order: 2

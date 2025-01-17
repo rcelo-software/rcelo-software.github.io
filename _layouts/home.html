@@ -63,7 +63,7 @@ layout: default
     font-family: 'Arial Black', Arial, sans-serif;
     font-size: 30px;
     font-weight: bold;
-    color: #ffffff; /* Change text color to white */
+    color: #000000; /* Change text color to white */
     transition: color 0.3s ease, font-size 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Add background and transform transitions */
     text-decoration: none;
     border: 1px solid #999898;
@@ -71,28 +71,26 @@ layout: default
     display: block;
     margin: 0 auto;
     animation: button-flicker 30s infinite alternate;
-  }
+     }
   
   .magic-button {
-    background-color: #9146FF; /* Set initial background color to purple */
+    background-color: #0f0064; /* Initial background color */
+    animation: button-color-flicker 10s infinite alternate; /* Add color flicker animation */
+    color: #ffffff; /* Ensure text color remains white */
+    transform: scale(1); /* Initial size */
+  }
+  
+  @keyframes button-color-flicker {
+    0%, 100% {
+      background-color: #3794ff; /* Initial purple color */
+    }
+    50% {
+      background-color: #3794ff; /* Second purple color */
+    }
   }
   
   .magic-button:hover {
-    color: #e591ff;; /* Change text color on hover to purple */
-    background-color: #f0f0f0; /* Change background color on hover to light gray */
-  }
-  
-  .portfolio-button {
-    color: rgb(62.9, 62.9, 62.9);/* Set text color to main website title color */
-    background-color: #f0f0f0; /* Set initial background color to light gray */
-  }
-  
-  .portfolio-button:hover {
-    color: #e591ff;; /* Change text color on hover to white */
-  }
-  
-  .magic-button:hover, .portfolio-button:hover {
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    transform: scale(1.45); /* Slightly enlarge the button on hover */
     cursor: pointer; /* Change cursor to pointer on hover */
   }
   
@@ -102,58 +100,61 @@ layout: default
     gap: 100px;
   }
   
-  .status-text_day:hover {
-    /* Reset any hover effects */
-    text-shadow: none;
-    color: inherit;
-    /* Add any other properties you want to reset */
-
-  }
   
 </style>
 
-
-<div class="home-container">
+<div class="home-container"></div>
   <div>
-    <h1 class="hologram" id="dynamic-emoji-1" style="font-size: 150px;">🙋‍♂️</h1>
-  </div>
-  <div>
-    <h1 class="hologram" id="dynamic-emoji-2" style="font-size: 150px;">🤖</h1>
+    <h1 class="hologram" id="dynamic-emoji-1" style="font-size: 150px;">&lt;/&gt;🛠️</h1>
   </div>
 </div>
 <p class="busy" id="status-text" style="font-size: 20px;">
-  Hi! We work with computers by listening closely to what they say...
+  Software & Hardware Expertise
+</p>
+<p class="busy" id="status-text" style="font-size: 16px;">
+  We build, deploy, and secure software solutions in the cloud and on-premises. 
+</p>
+<p class="busy" id="status-text" style="font-size: 16px;">
+  Our systems are robust, scalable, and secure, tailored to your business needs. 
 </p>
 
 <br>
 <br>
-<br>
-<br>
 
-<div class="home-container">
-  <div>
-    <h1 class="hologram" id="dynamic-emoji-3" style="font-size: 150px;">⚒️</h1>
-  </div>
-  <div>
-    <h1 class="hologram" id="dynamic-emoji-4" style="font-size: 150px;">⚔️</h1>
-  </div>
+<div style="text-align: center;">
+  <h1 class="hologram" id="dynamic-emoji-2" style="font-size: 150px;">✨🚀</h1>
 </div>
 
-<p class="busy" id="status-text" style="font-size: 20px;">
-  and we persuade them to do what we want, until they give up and do it.
+<p class="busy" id="status-text" style="font-size: 20px;">From Vision to Reality</p>
+<p class="busy" id="status-text" style="font-size: 16px;">
+  We bring ideas to life with innovative and tailored solutions.
+</p>
+<p class="busy" id="status-text" style="font-size: 16px;">
+  Whether it's a complex system or a simple application, we turn concepts into tangible results that drive success.
 </p>
 
 <br>
+<br>
+
+<div style="text-align: center;">
+  <h1 class="hologram" id="dynamic-emoji-1" style="font-size: 150px;">🔧💡</h1>
+</div>
+
+</div>
+<p class="busy" id="status-text" style="font-size: 20px;">End-to-End Support</p>
+<p class="busy" id="status-text" style="font-size: 16px;">
+  We offer end-to-end lifecycle support for small to medium-sized IT projects.
+</p>
+<p class="busy" id="status-text" style="font-size: 16px;">
+  From consulting and design to deployment and maintenance.
+</p>
+
 
 <br>
 <br>
 <br>
 
 <div class="button-container">
-  <button onclick="window.location.href='/work';" class="portfolio-button">work proof</button>
-</div>
-<br>
-<div class="button-container">
-  <button onclick="window.location.href='/contact';" class="magic-button">we speak with humans as well...</button>
+  <button onclick="window.location.href='/contact';" class="magic-button">Let's talk!</button>
 </div>
 <br>

@@ -1,7 +1,7 @@
 // Add CSS variables at the top of the file
 :root {
-  --primary: #9146FF;
-  --primary-hover: #e591ff;  // Slightly darker purple for hover states
+  --primary: #0f0064;
+  --primary-hover: #3794ff;  // Changed to neon blue for hover states
 }
 
 .site-title {
@@ -71,6 +71,9 @@ table {
     font-weight: 700;
     margin-top: 2rem;
   }
+  font-size: 1.1em;
+  line-height: 1.8;
+  text-align: left;
 }
 
 // Custom styles
@@ -84,11 +87,6 @@ table {
     text-decoration: none;
     color: var(--primary-hover);
   }
-}
-
-.post-content {
-  font-size: 1.1em;
-  line-height: 1.8;
 }
 
 // Add these styles for navigation
