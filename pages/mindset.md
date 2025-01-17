@@ -6,5 +6,3 @@ permalink: /mindset/
 
 ## **Mindset Content**
 <!-- Your mindset content here -->
-
-{% include footer.html %} 
