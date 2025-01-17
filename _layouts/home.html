@@ -75,38 +75,22 @@ layout: default
   
   .magic-button {
     background-color: #0f0064; /* Initial background color */
-    animation: button-color-flicker 10s infinite alternate; /* Add color flicker animation */
+    animation: button-color-flicker 10s infinite alternate, text-color-flicker 10s infinite alternate; /* Add text color flicker animation */
     color: #ffffff; /* Ensure text color remains white */
     transform: scale(1); /* Initial size */
   }
   
-  @keyframes button-color-flicker {
-    0%, 100% {
-      background-color: #3794ff; /* Initial purple color */
-    }
-    50% {
-      background-color: #3794ff; /* Second purple color */
-    }
-  }
-  
   .magic-button:hover {
-    transform: scale(1.45); /* Slightly enlarge the button on hover */
     cursor: pointer; /* Change cursor to pointer on hover */
+    color: #007e8f;
+    background-color: #ffffff !important; /* Ensure background color changes on hover */
   }
-  
   .button-container {
     display: flex;
     justify-content: center;
     gap: 100px;
   }
   
-  .days-since-last-post {
-    font-family: 'Arial', sans-serif; /* Use a clean, readable font */
-    font-size: 20px; /* Set a comfortable font size */
-    color: #333; /* Use a neutral color for the text */
-    text-align: center; /* Center the text */
-    margin: 20px 0; /* Add some vertical spacing */
-  }
   
 </style>
 
