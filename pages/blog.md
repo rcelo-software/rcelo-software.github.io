@@ -5,6 +5,14 @@ permalink: /blog/
 
 <div class="blog-index">
   {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+  {% assign last_post_date = sorted_posts.first.date %}
+  {% assign current_date = 'now' | date: "%s" %}
+  {% assign last_post_date_in_seconds = last_post_date | date: "%s" %}
+  {% assign seconds_since_last_post = current_date | minus: last_post_date_in_seconds %}
+  {% assign days_since_last_post = seconds_since_last_post | divided_by: 86400 %}
+
+  <p>Days since last post: {{ days_since_last_post }}</p>
+
   {% for post in sorted_posts %}
     <article class="post-preview">
       <h2 class="post-title">

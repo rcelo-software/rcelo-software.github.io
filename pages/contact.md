@@ -2,6 +2,11 @@
 layout: page
 permalink: /contact/
 ---
+
+<p style="text-align: center;">
+  <strong>📧 Email:</strong>  <a href="mailto:hello@rcelo-software.com">hello@rcelo-software.com</a>
+</p>
+
 <!-- Guidance text for email -->
 <p style="text-align: center;">
   Feel free to reach out to us via <strong>email</strong> for any inquiries, support, or feedback.
@@ -9,9 +14,6 @@ permalink: /contact/
   We aim to respond within 24 hours.
 </p>
 
-<p style="text-align: center;">
-  <strong>📧 Email:</strong>  <a href="mailto:hello@rcelo-software.com">hello@rcelo-software.com</a>
-</p>
 
 
 <br>
@@ -19,12 +21,8 @@ permalink: /contact/
 
 
 <p style="text-align: center;">
-  Or have a <strong>discovery call</strong> with us using the Calendly widget below.
+  Or have a <strong>schedule a discovery call</strong> with us, using the <strong>Calendly</strong> widget below:
 </p>
-<p style="text-align: center;">
-  We look forward to connecting with you.
-</p>
-
 
 
 <!-- Calendly inline widget begin -->
