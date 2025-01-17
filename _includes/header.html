@@ -3,6 +3,8 @@
     <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
     
     <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger" class="menu-icon">&#9776;</label>
       <div class="trigger">
         {% assign sorted_navigation = site.data.navigation | sort: 'order' %}
         {% for item in sorted_navigation %}
@@ -14,23 +16,30 @@
 </header>
 
 <style>
-  .language-selector {
-    display: inline-block;
-    margin-left: 20px;
+  .site-title {
+    color: grey;
   }
-  
-  .lang-link {
-    padding: 3px 8px;
-    margin: 0 2px;
-    text-decoration: none;
-    border-radius: 3px;
-    background-color: #f0f0f0;
+  .site-nav .menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: grey;
+    border: none;
   }
-  
-  .current-lang {
-    padding: 3px 8px;
-    margin: 0 2px;
-    background-color: #e0e0e0;
-    border-radius: 3px;
+  .site-nav .nav-trigger {
+    display: none;
+  }
+  @media screen and (max-width: 600px) {
+    .site-nav .menu-icon {
+      display: block;
+      margin-left: -10px;
+      border: none;
+    }
+    .site-nav .trigger {
+      display: none;
+    }
+    .site-nav .nav-trigger:checked ~ .trigger {
+      display: block;
+    }
   }
 </style> 

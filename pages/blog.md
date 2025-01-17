@@ -26,10 +26,6 @@ permalink: /blog/
           {% endfor %}
         </div>
       {% endif %}
-
-      <div class="post-excerpt">
-        {{ post.excerpt }}
-      </div>
     </article>
     <hr>
   {% else %}

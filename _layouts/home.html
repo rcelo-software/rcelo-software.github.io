@@ -4,23 +4,30 @@ layout: default
 
 <style>
   .hologram {
-    font-size: 150px;
-    animation: glow .4s infinite alternate;
-    text-shadow: 
-      0 0 10px rgba(0, 255, 255, 0.7), 
-      0 0 20px rgba(255, 0, 255, 0.7), 
-      0 0 30px rgba(0, 255, 0, 0.5);
-    transition: text-shadow 0.5s ease, opacity 0.5s ease;
+    font-family: 'Courier New', Courier, monospace; /* Use a monospaced font for a techy look */
+    font-size: 18px; /* Set a smaller base font size */
+    color: #00FF00; /* Initial bright green color for hologram text */
+    text-shadow: 0 0 1px #00FF00, 0 0 5px #00FF00, 0 0 5px #00FF00, 0 0 5px #00FF00; /* Create a glowing effect */
+    animation: text-flicker 30s infinite alternate; /* Add a flickering animation to text shadow */
   }
 
-  /* Hover effect for neon glow on emoji */
-  .hologram:hover {
-    text-shadow: 
-      0 0 30px rgba(0, 255, 255, 1), 
-      0 0 60px rgba(255, 0, 255, 1), 
-      0 0 90px rgba(0, 255, 0, 0.7);
-    opacity: 1;
-    font-size: 350px; /* Increase font size on hover */
+  @keyframes text-flicker {
+    0%, 100% { 
+      text-shadow: 0 0 0.7px #FF00FF, 0 0 2.1px #FF00FF, 0 0 3.5px #FF00FF, 0 0 7px #FF00FF; 
+      color: #FF00FF;
+    }
+    10%, 90% { 
+      text-shadow: 0 0 0.7px #8A2BE2, 0 0 2.1px #8A2BE2, 0 0 3.5px #8A2BE2, 0 0 7px #8A2BE2; 
+      color: #8A2BE2;
+    }
+    45%, 55% { 
+      text-shadow: 0 0 0.7px #00CED1, 0 0 2.1px #00CED1, 0 0 3.5px #00CED1, 0 0 7px #00CED1; 
+      color: #00CED1;
+    }
+    50% { 
+      text-shadow: 0 0 0.7px #FFD700, 0 0 1.4px #FFD700, 0 0 2.1px #FFD700, 0 0 2.8px #FFD700; 
+      color: #FFD700;
+    }
   }
 
   .busy {
@@ -28,7 +35,7 @@ layout: default
     font-family: 'Arial', sans-serif;
     font-size: 36px; /* Set the base font size */
     transition: text-shadow 0.5s ease, font-size 0.3s ease;
-    color: #000; /* Set text color to black */
+    color: rgb(62.9, 62.9, 62.9);/* Set text color to main website title color */
     max-width: 200px; /* Set a maximum width for text elements */
     white-space: normal; /* Allow text to wrap normally */
     margin: 10px; /* Add some margin for spacing */
@@ -43,63 +50,80 @@ layout: default
 
   .home-container {
     display: grid; /* Use grid layout */
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 20px; /* Space between items */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px; /* Set the gap between columns to 0px */
     justify-items: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
     padding: 0 20px; /* Padding for the container */
+    text-align: center; /* Center text within each grid item */
   }
+
+  .magic-button {
+    padding: 0 20px; /* Padding for the container */
+    font-family: 'Arial Black', Arial, sans-serif; /* Match navigation font */
+    font-size: 30px; /* Increase font size */
+    font-weight: bold; /* Match navigation font weight */
+    color: #9146FF;
+    transition: color 0.3s ease, font-size 0.3s ease; /* Add color transition */
+    text-decoration: none; /* Ensure no underline */
+    border: 1px solid #e8e8e8; /* Apple style border */
+    border-radius: 5px; /* Slightly rounded corners */
+    display: block; /* Make button a block element */
+    margin: 0 auto; /* Center the button */
+    animation: button-flicker 30s infinite alternate; /* Add flickering animation to button text */
+  }
+
+  @keyframes button-flicker {
+    0%, 100% { 
+      color: #FF00FF;
+    }
+    10%, 90% { 
+      color: #8A2BE2;
+    }
+    45%, 55% { 
+      color: #00CED1;
+    }
+    50% { 
+      color: #FFD700;
+    }
+  }
+
+  .magic-button:hover {
+    color: var(--primary-hover); /* Change color on hover */
+    font-size: 40px; /* Slightly increase font size on hover */  }
+
+  .button-container {
+    display: flex; /* Use flexbox to align buttons side by side */
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 100px; /* Reduce space between the buttons */
+  }
+  
 </style>
 
 <div class="home-container">
   <div>
-    <h1 class="hologram" id="dynamic-emoji" style="font-size: 270px;">🎉</h1>
-    <p class="busy" id="status-text" style="font-size: 32.4px;">WELCOME, STRANGER</p>
+    <h1 class="hologram" id="dynamic-emoji-1" style="font-size: 150px;">🧙‍♂️</h1>
+    <p class="busy" id="status-text_day" style="font-size: 20px;">Hi, we are software experts</p>
   </div>
   <div>
-    <h1 class="hologram" id="dynamic-emoji" style="font-size: 270px;">💡</h1>
-    <p class="busy" id="status-text_day" style="font-size: 32.4px;">Our big idea has been brewing for 349 days</p>
+    <h1 class="hologram" id="dynamic-emoji-2" style="font-size: 150px;">🪄</h1>
+    <p class="busy" id="status-text_day" style="font-size: 20px;">We do computer magic</p>
   </div>
   <div>
-    <h1 class="hologram" id="dynamic-emoji" style="font-size: 270px;">🚀</h1>
-    <p class="busy" id="status-text" style="font-size: 32.4px;">We’ve been live for just 1 day</p>
+    <h1 class="hologram" id="dynamic-emoji-3" style="font-size: 150px;">📈</h1>
+    <p class="busy" id="status-text" style="font-size: 20px;">that delivers value</p>
   </div>
   <div>
-    <h1 class="hologram" id="dynamic-emoji" style="font-size: 270px;">🕒</h1>
-    <p class="busy" id="status-text_billed" style="font-size: 32.4px;">We have billed over 400 hours</p>
-  </div>
-  <div>
-    <h1 class="hologram" id="dynamic-emoji" style="font-size: 270px;">👥</h1>
-    <p class="busy" id="status-text" style="font-size: 32.4px;">We have 0 clients on board</p>
-  </div>
-
-  <div>
-    <h1 class="hologram" id="dynamic-emoji" style="font-size: 270px;">💰</h1>
-    <p class="busy" id="status-text" style="font-size: 32.4px;">Revenue’s at $1M… and climbing</p>
-  </div>
-  <div>
-    <h1 class="hologram" id="dynamic-emoji" style="font-size: 270px;">📃</h1>
-    <p class="busy" id="status-text" style="font-size: 32.4px;">18 contracts signed this year</p>
+    <h1 class="hologram" id="dynamic-emoji-4" style="font-size: 150px;">🚀</h1>
+    <p class="busy" id="status-text" style="font-size: 20px;">and accelerate your growth.</p>
   </div>
 </div>
 
-<script>
+<br>
+<br>
+<br>
 
-  // Function to calculate days since a given date
-  function calculateDaysSince(date) {
-    const currentDate = new Date(); // Current date
-    const timeDifference = currentDate - date; // Time difference in milliseconds
-    return Math.floor(timeDifference / (1000 * 60 * 60 * 24)); // Convert to days
-  }
-
-  // Hardcoded dates
-  const dnsPurchaseDate = new Date('2024-02-01'); // DNS purchase date
-  const siteLaunchDate = new Date('2024-02-01'); // Site launch date
-
-  // Update the status text with the number of days since each event
-  document.getElementById('status-text_day').innerText = `This idea exists for ${calculateDaysSince(dnsPurchaseDate)} days!`;
-  document.getElementById('status-text_site').innerText = `Site has been live for ${calculateDaysSince(siteLaunchDate)} days!`;
-
-</script>
-
-{% include footer.html %}   
+<div class="button-container">
+  <button onclick="window.location.href='/learn-more';" class="magic-button">Discover Our Solutions</button>
+  <button onclick="window.location.href='/contact';" class="magic-button">Start Your Journey</button>
+</div>
