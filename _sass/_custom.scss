@@ -16,6 +16,13 @@
   }
 }
 
+// Add media query for mobile devices
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 1.8em;  // Adjust the font size for mobile
+  }
+}
+
 .page-title {
   font-family: 'Arial Black', Arial, sans-serif;
   font-size: 2.5em;
@@ -86,6 +93,9 @@ table {
 
 // Add these styles for navigation
 .site-nav {
+  display: flex;
+  flex-wrap: wrap;
+
   .page-link {
     font-family: 'Arial Black', Arial, sans-serif;
     font-size: 1.2em;
@@ -96,18 +106,6 @@ table {
     &:hover {
       text-decoration: none;
       color: var(--primary-hover, darken(#2a7ae2, 15%));
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-    .page-link {
-      margin: 0;
-      padding: 10px 20px;
-      display: block;
-      
-      &:not(:last-child) {
-        margin-right: 0;
-      }
     }
   }
 }
