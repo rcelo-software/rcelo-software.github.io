@@ -20,8 +20,6 @@
 
 title: rcelo-software
 email: hello@rcelo-software.com
-description: >- 
-  Software development and professional growth journey
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rcelo-software.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: rcelo-software
@@ -67,8 +65,3 @@ exclude:
   - Gemfile.lock
   - node_modules/
   - vendor/
-
-# Add these to your existing config
-discord_invite: "https://discord.gg/eNP8Y5MH75"
-social_links:
-  discord: "https://discord.gg/eNP8Y5MH75"
