@@ -2,11 +2,40 @@
 layout: page
 permalink: /contact/
 ---
+<!-- Guidance text for email -->
+<p style="text-align: center;">
+  Feel free to reach out to us via <strong>email</strong> for any inquiries, support, or feedback.
+<p style="text-align: center;">
+  We aim to respond within 24 hours.
+</p>
 
-## **Email:**  [hello@rcelo-software.com](mailto:hello@rcelo-software.com)
+<p style="text-align: center;">
+  <strong>📧 Email:</strong>  <a href="mailto:hello@rcelo-software.com">hello@rcelo-software.com</a>
+</p>
+
+
+<br>
+<br>
+
+
+<p style="text-align: center;">
+  Or have a <strong>discovery call</strong> with us using the Calendly widget below.
+</p>
+<p style="text-align: center;">
+  We look forward to connecting with you.
+</p>
 
 
 <!-- Calendly inline widget begin -->
 <div class="calendly-inline-widget" data-url="https://calendly.com/rcelo-software/lead" style="min-width:320px;height:1000px; margin-top: 0;"></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <!-- Calendly inline widget end -->
+
+
+<div style="text-align: center; padding: 20px; background-color: #f8f9fa; border-top: 1px solid #e9ecef;">
+    <p style="margin: 0;">Check us out:</p>
+    <i class="fab fa-linkedin" style="font-size: 24px;"></i> 
+    <a href="https://www.linkedin.com/company/rcelo-software/" style="margin: 0 20px; text-decoration: none;">LinkedIn</a> 
+    <i class="fab fa-github" style="font-size: 24px;"></i> 
+    <a href="https://github.com/rcelo-software" style="text-decoration: none;">GitHub</a>
+</div> 

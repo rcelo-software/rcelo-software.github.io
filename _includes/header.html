@@ -3,8 +3,6 @@
     <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
     
     <nav class="site-nav">
-      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-      <label for="nav-trigger" class="menu-icon">&#9776;</label>
       <div class="trigger">
         {% assign sorted_navigation = site.data.navigation | sort: 'order' %}
         {% for item in sorted_navigation %}
@@ -16,30 +14,29 @@
 </header>
 
 <style>
+  .wrapper {
+    text-align: center;
+  }
   .site-title {
     color: grey;
+    display: block;
+    margin: 0 auto;
   }
-  .site-nav .menu-icon {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: grey;
-    border: none;
+  .site-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .site-nav .nav-trigger {
-    display: none;
+  .site-nav .trigger {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   @media screen and (max-width: 600px) {
-    .site-nav .menu-icon {
-      display: block;
-      margin-left: -10px;
-      border: none;
-    }
-    .site-nav .trigger {
-      display: none;
-    }
-    .site-nav .nav-trigger:checked ~ .trigger {
-      display: block;
+    .site-nav {
+      flex-direction: column;
+      align-items: center;
     }
   }
 </style> 

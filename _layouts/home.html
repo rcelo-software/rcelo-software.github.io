@@ -8,9 +8,9 @@ layout: default
     font-size: 18px; /* Set a smaller base font size */
     color: #00FF00; /* Initial bright green color for hologram text */
     text-shadow: 0 0 1px #00FF00, 0 0 5px #00FF00, 0 0 5px #00FF00, 0 0 5px #00FF00; /* Create a glowing effect */
-    animation: text-flicker 30s infinite alternate; /* Add a flickering animation to text shadow */
+    animation: text-flicker 10s infinite alternate; /* Add a flickering animation to text shadow */
   }
-
+  
   @keyframes text-flicker {
     0%, 100% { 
       text-shadow: 0 0 0.7px #FF00FF, 0 0 2.1px #FF00FF, 0 0 3.5px #FF00FF, 0 0 7px #FF00FF; 
@@ -20,7 +20,7 @@ layout: default
       text-shadow: 0 0 0.7px #8A2BE2, 0 0 2.1px #8A2BE2, 0 0 3.5px #8A2BE2, 0 0 7px #8A2BE2; 
       color: #8A2BE2;
     }
-    45%, 55% { 
+    25%, 75% { 
       text-shadow: 0 0 0.7px #00CED1, 0 0 2.1px #00CED1, 0 0 3.5px #00CED1, 0 0 7px #00CED1; 
       color: #00CED1;
     }
@@ -29,101 +29,128 @@ layout: default
       color: #FFD700;
     }
   }
-
+  
   .busy {
     font-weight: bold;
     font-family: 'Arial', sans-serif;
     font-size: 36px; /* Set the base font size */
     transition: text-shadow 0.5s ease, font-size 0.3s ease;
     color: rgb(62.9, 62.9, 62.9);/* Set text color to main website title color */
-    max-width: 200px; /* Set a maximum width for text elements */
     white-space: normal; /* Allow text to wrap normally */
     margin: 10px; /* Add some margin for spacing */
     text-align: center; /* Center the text */
   }
-
+  
   /* Updated hover effect for text to increase size */
   .busy:hover {
     font-size: 40px; /* Increase size on hover */
     opacity: 1;
   }
-
+  
   .home-container {
     display: grid; /* Use grid layout */
     grid-template-columns: repeat(2, 1fr);
     gap: 0px; /* Set the gap between columns to 0px */
     justify-items: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
-    padding: 0 20px; /* Padding for the container */
+    padding: 0 0px; /* Padding for the container */
     text-align: center; /* Center text within each grid item */
   }
-
+  
+  .magic-button, .portfolio-button {
+    padding: 10px 30px; /* Increase padding for a larger clickable area */
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff; /* Change text color to white */
+    transition: color 0.3s ease, font-size 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Add background and transform transitions */
+    text-decoration: none;
+    border: 1px solid #999898;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    animation: button-flicker 30s infinite alternate;
+  }
+  
   .magic-button {
-    padding: 0 20px; /* Padding for the container */
-    font-family: 'Arial Black', Arial, sans-serif; /* Match navigation font */
-    font-size: 30px; /* Increase font size */
-    font-weight: bold; /* Match navigation font weight */
-    color: #9146FF;
-    transition: color 0.3s ease, font-size 0.3s ease; /* Add color transition */
-    text-decoration: none; /* Ensure no underline */
-    border: 1px solid #e8e8e8; /* Apple style border */
-    border-radius: 5px; /* Slightly rounded corners */
-    display: block; /* Make button a block element */
-    margin: 0 auto; /* Center the button */
-    animation: button-flicker 30s infinite alternate; /* Add flickering animation to button text */
+    background-color: #9146FF; /* Set initial background color to purple */
   }
-
-  @keyframes button-flicker {
-    0%, 100% { 
-      color: #FF00FF;
-    }
-    10%, 90% { 
-      color: #8A2BE2;
-    }
-    45%, 55% { 
-      color: #00CED1;
-    }
-    50% { 
-      color: #FFD700;
-    }
-  }
-
+  
   .magic-button:hover {
-    color: var(--primary-hover); /* Change color on hover */
-    font-size: 40px; /* Slightly increase font size on hover */  }
-
+    color: #e591ff;; /* Change text color on hover to purple */
+    background-color: #f0f0f0; /* Change background color on hover to light gray */
+  }
+  
+  .portfolio-button {
+    color: rgb(62.9, 62.9, 62.9);/* Set text color to main website title color */
+    background-color: #f0f0f0; /* Set initial background color to light gray */
+  }
+  
+  .portfolio-button:hover {
+    color: #e591ff;; /* Change text color on hover to white */
+  }
+  
+  .magic-button:hover, .portfolio-button:hover {
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
   .button-container {
-    display: flex; /* Use flexbox to align buttons side by side */
-    justify-content: center; /* Center the buttons horizontally */
-    gap: 100px; /* Reduce space between the buttons */
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+  }
+  
+  .status-text_day:hover {
+    /* Reset any hover effects */
+    text-shadow: none;
+    color: inherit;
+    /* Add any other properties you want to reset */
   }
   
 </style>
 
+
 <div class="home-container">
   <div>
-    <h1 class="hologram" id="dynamic-emoji-1" style="font-size: 150px;">🧙‍♂️</h1>
-    <p class="busy" id="status-text_day" style="font-size: 20px;">Hi, we are software experts</p>
+    <h1 class="hologram" id="dynamic-emoji-1" style="font-size: 150px;">🙋‍♂️</h1>
   </div>
   <div>
-    <h1 class="hologram" id="dynamic-emoji-2" style="font-size: 150px;">🪄</h1>
-    <p class="busy" id="status-text_day" style="font-size: 20px;">We do computer magic</p>
+    <h1 class="hologram" id="dynamic-emoji-2" style="font-size: 150px;">🤖</h1>
+  </div>
+</div>
+<p class="busy" id="status-text" style="font-size: 20px;">
+  Hi! We work with computers, we listen closely to what they say...
+</p>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="home-container">
+  <div>
+    <h1 class="hologram" id="dynamic-emoji-3" style="font-size: 150px;">⚒️</h1>
   </div>
   <div>
-    <h1 class="hologram" id="dynamic-emoji-3" style="font-size: 150px;">📈</h1>
-    <p class="busy" id="status-text" style="font-size: 20px;">that delivers value</p>
-  </div>
-  <div>
-    <h1 class="hologram" id="dynamic-emoji-4" style="font-size: 150px;">🚀</h1>
-    <p class="busy" id="status-text" style="font-size: 20px;">and accelerate your growth.</p>
+    <h1 class="hologram" id="dynamic-emoji-4" style="font-size: 150px;">⚔️</h1>
   </div>
 </div>
 
+<p class="busy" id="status-text" style="font-size: 20px;">
+  and we persuade them to do what we want, until they give up.
+</p>
+
+<br>
 <br>
 <br>
 <br>
 
 <div class="button-container">
-  <button onclick="window.location.href='/learn-more';" class="magic-button">Discover Our Solutions</button>
-  <button onclick="window.location.href='/contact';" class="magic-button">Start Your Journey</button>
+  <button onclick="window.location.href='/work';" class="portfolio-button">work proof</button>
 </div>
+<br>
+<div class="button-container">
+  <button onclick="window.location.href='/contact';" class="magic-button">we speak with humans as well...</button>
+</div>
+<br>
