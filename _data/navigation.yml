@@ -1,4 +1,4 @@
-- title: Contact
+- title: contact
   url: /contact/
   order: 99
 
@@ -6,6 +6,10 @@
 #   url: /mindset/
 #   order: 2
 
-- title: Blog
+- title: blog
   url: /blog/
   order: 3 
+
+- title: work
+  url: /work/
+  order: 2
