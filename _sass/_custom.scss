@@ -1,6 +1,6 @@
 // Add CSS variables at the top of the file
 :root {
-  --primary: #991bff;
+  --primary: #0f0064;
   --primary-hover: #007e8f; // Changed to neon blue for hover states
 }
 
@@ -32,7 +32,7 @@
 
 // Override Minima's base styles
 a {
-  color: var(--primary);
+  color: #007e8f;
   text-decoration: none;
   transition: color 0.3s ease;
 
@@ -99,7 +99,7 @@ table {
     font-family: 'Arial Black', Arial, sans-serif;
     font-size: 1.2em;
     font-weight: bold;
-    color: var(--primary, #2a7ae2);
+    color: var(--primary, #0f0064);
     margin-right: 20px;
     
     &:hover {

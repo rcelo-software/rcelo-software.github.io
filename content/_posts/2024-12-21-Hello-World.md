@@ -4,7 +4,7 @@ date: 2025-01-17"
 author: "Rafael Novais"
 layout: post
 ---
-We're excited to announce that [**rcelo-software.com**](https://rcelo-software.com) is now live! 
+We're excited to announce that our website is live!  
 
 This website represents our **commitment to building a company that delivers exceptional software value**. While we're currently starting as a **freelance venture**, our goal is to grow into a **business-to-business powerhouse**, inspired by the best practices in the industry.
 

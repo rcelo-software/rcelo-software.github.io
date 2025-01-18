@@ -14,21 +14,9 @@ layout: default
   
 
   @keyframes text-flicker {
-    0%, 100% { 
-      text-shadow: 0 0 0.7px #FF00FF, 0 0 2.1px #FF00FF, 0 0 3.5px #FF00FF, 0 0 7px #FF00FF; 
-      color: #FF00FF;
-    }
-    10%, 90% { 
-      text-shadow: 0 0 0.7px #8A2BE2, 0 0 2.1px #8A2BE2, 0 0 3.5px #8A2BE2, 0 0 7px #8A2BE2; 
-      color: #8A2BE2;
-    }
-    25%, 75% { 
-      text-shadow: 0 0 0.7px #00CED1, 0 0 2.1px #00CED1, 0 0 3.5px #00CED1, 0 0 7px #00CED1; 
-      color: #00CED1;
-    }
-    50% { 
-      text-shadow: 0 0 0.7px #FFD700, 0 0 1.4px #FFD700, 0 0 2.1px #FFD700, 0 0 2.8px #FFD700; 
-      color: #FFD700;
+    0%, 100%  { 
+      text-shadow: 0 0 0.7px var(--primary-hover), 0 0 2.1px var(--primary-hover), 0 0 3.5px var(--primary-hover), 0 0 7px var(--primary-hover); 
+      color: var(--primary-hover);
     }
   }
   
