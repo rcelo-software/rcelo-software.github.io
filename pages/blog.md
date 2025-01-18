@@ -1,5 +1,6 @@
 ---
 layout: default
+title: blog
 permalink: /blog/
 ---
 
@@ -60,9 +61,6 @@ permalink: /blog/
     margin: 2rem 0;
   }
 </style>
-
-<br>
-<br>
 
 <div class="blog-index">
   {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
