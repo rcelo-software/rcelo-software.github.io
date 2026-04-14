@@ -1,6 +1,7 @@
 {
     "name": "rcelo-software",
     "short_name": "rcelo-software",
+    "description": "we worry about the tech, so you don't have to.",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
