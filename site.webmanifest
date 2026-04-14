@@ -1,0 +1,14 @@
+{
+  "name": "RCELO-SOFTWARE",
+  "short_name": "RCELO",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#facc15",
+  "background_color": "#080808",
+  "display": "standalone"
+}
